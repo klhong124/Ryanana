@@ -1,2 +1,2 @@
 # Ryanana
-BEST BANANA Online Store By Ryan Kwan
+BEST BANANA Online Store by Ryan Kwan
