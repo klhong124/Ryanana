@@ -1,0 +1,82 @@
+@font-face {
+font-family: "Prisma";
+src: url("fonts/Prisma.ttf");
+}
+@font-face {
+font-family: "Citadels";
+src: url("fonts/Citadels.otf");
+}
+header{
+	background: no-repeat top;
+	background-image: url("img/headingbg.png");
+	background-size: 100%;
+	margin: 0 ;
+	padding-top: 30px;
+	text-align: center;
+	height:263px;
+}
+#home-name{
+	font-size: 6vw;
+	text-align: center;
+	font-family: Prisma;
+}
+#home-top-description {
+	font-size: 2vw;
+	text-align: center;
+	font-family: Citadels;
+}
+body{
+	background-color:#fffad1 !important;
+}
+.navbar-inverse,.navbar-inverse .navbar-toggle{
+     border-color: #ff8c42 !important;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+	background-color:#ff8c42 !important;
+	opacity: 0.4;
+}
+#navbar {
+	background-color: #ff8c42;
+}
+#navbar a {
+	font-family: Verdana;
+	float: right;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#navbar a:hover {
+	opacity: 0.4;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+	background-color: red !important;
+}
+.navbar-brand {
+	padding-left:12vw !important;
+}
+.container{
+	margin-left:12% !important;
+	width:80% !important;
+}
+
+@keyframes blink {
+	
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+	opacity: 1;
+	}
+}
+
+.csrolldown{
+	animation: blink 1.5s;
+	animation-iteration-count: infinite;
+}

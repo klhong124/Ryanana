@@ -1,0 +1,68 @@
+@font-face {
+font-family: "Prisma";
+src: url("fonts/Prisma.ttf");
+}
+@font-face {
+font-family: "Citadels";
+src: url("fonts/Citadels.otf");
+}
+header{
+	background: no-repeat top;
+	background-image: url("img/headingbg.png");
+	background-size: 100%;
+	margin: 0 ;
+	padding-top: 50px;
+	text-align: center;
+	height:263px;
+}
+#home-name{
+	font-size: 6vw;
+	text-align: center;
+	font-family: Prisma;
+}
+#home-top-description {
+	padding-top: 20px;
+	font-size: 2vw;
+	text-align: center;
+	font-family: Citadels;
+}
+#navbar {
+	overflow: hidden;
+	background-color: #ff8c42;
+	text-align: center;
+	height:50px;
+}
+#navbar a {
+	font-family: Verdana;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 17px;
+}
+body {
+	background-color:#fffad1 !important;
+}
+.container-login100{
+	background-color:#fffad1 !important;
+	min-height:0 !important;
+}
+.wrap-login100{
+	background-color:#fffad1 !important;
+}
+#username{
+	padding:0px 5px 0px 110px;
+}
+#password{
+	padding:0px 5px 0px 110px;
+}
+#retype-password{
+	padding:0px 5px 0px 185px;
+}
+#emailaddress{
+	padding:0px 5px 0px 150px;
+}
+#phonenumber{
+	padding:0px 5px 0px 150px;
+}
