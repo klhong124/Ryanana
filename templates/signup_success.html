@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sign Up Page</title>
+		<link rel="stylesheet" href="static/css/signup_page.css">
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/login-util.css">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/login-main.css">
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/daterangepicker/moment.min.js"></script>
+	<script src="static/bootstrap/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/js/main.js"></script>
+	</head>
+	<header>
+		<h1 id="home-name">RYANANA</h1>
+		<h2 id="home-top-description">THE RYANANA MEMBERSHIP SIGN UP SYSTEM</h2>
+	</header>
+	<body>
+		<nav id="navbar">
+			<a>Your account has been created successfully</a>
+		</nav>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+					<div class="wrap-input100 validate-input m-t-35" data-validate = "userID">
+						<input class="input100" type="text" name="userID" style="padding:0px 5px 0px 100px" value="{{ session['userID']}}" disabled>
+						<span class="focus-input100" data-placeholder="User ID"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-t-35" data-validate = "Enter username">
+						<input class="input100" type="text" name="Username" style="padding:0px 5px 0px 110px" value="{{ session['Username']}}" disabled>
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-t-35" data-validate="Enter password">
+						<input class="input100" type="password" name="Password" style="padding:0px 5px 0px 110px" value="{{ session['Password']}}" disabled>
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-t-35" data-validate = "Enter Email">
+						<input class="input100" type="text" name="Email" style="padding:0px 5px 0px 150px" value="{{ session['Email']}}" disabled>
+						<span class="focus-input100" data-placeholder="Email Address"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter PhoneNumber">
+						<input class="input100" type="text" name="Phone" style="padding:0px 5px 0px 150px" value="{{ session['Phone']}}" disabled>
+						<span class="focus-input100" data-placeholder="Phone Number"></span>
+					</div>
+					<a href="login" class="login100-form-btn m-t-35" >
+							Login
+					</a>
+			</div>
+		</div>
+	</div>
+	</body>

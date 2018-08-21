@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sent Feedback</title>
+		<link rel="stylesheet" href="/static/css/login_page.css">
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/login-util.css">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/login-main.css">
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/daterangepicker/moment.min.js"></script>
+	<script src="static/bootstrap/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/js/main.js"></script>
+	</head>
+	<header>
+		<h1 id="home-name">RYANANA</h1>
+		<h2 id="home-top-description">THE RYANANA CONTACT US SYSTEM</h2>
+	</header>
+	<body>
+		<nav id="navbar">
+			<a>Feedback has been send to us, Thank you very much.</a>
+		</nav>
+		<div style="font-family: Verdana;">
+				<div class="container" style="margin-top:5% !important; margin-left:12% !important;width:80% !important;">
+				  <h1 style="color:#a23e48">We hear your voices</h1>
+				  <p  class="m-t-50">Dear <b>{{guest}}</b>, Thank you for having taken your time to provide us with
+				  your valuable feedback relating to your stay with us.we are sincerely 
+				  concerned and apologise that we fell short on your expectations in some 
+				  area.Your helpful comments are much appreciated,and your feedback will 
+				  help us to continually improve the standard of facilities and services 
+				  offered to all our guests.Looking forward to see you again in the near 
+				  future.</p>
+				</div>
+		</div>
+		<a href="index" class="login100-form-btn m-t-50 m-b-50 button" style="font-size:90%;margin-left:40% !important;width:20% !important;">Return Home</a>
+	</body>
+	<script>
+		var username = document.getElementById("username");
+		var password = document.getElementById("password");
+		username.addEventListener("focus", usernameFocusFunction, true);
+		password.addEventListener("focus", passwordFocusFunction, true);
+		username.addEventListener("blur", usernameBlurFunction, true);
+		password.addEventListener("blur", passwordBlurFunction, true);
+		function usernameFocusFunction() {
+			document.getElementById("username").style = "padding:0 5px;transition-property: padding;transition-duration: .5s;transition-delay: .2s;"
+		}
+		function passwordFocusFunction() {
+			document.getElementById("password").style = "padding:0 5px;transition-property: padding;transition-duration: .5s;transition-delay: .2s;"
+		}
+		function usernameBlurFunction() {
+			document.getElementById("username").style = "padding:0px 5px 0px 110px;transition-property: padding;transition-duration: .1s;transition-delay: 0s;"
+		}
+		function passwordBlurFunction() {
+			document.getElementById("password").style = "padding:0px 5px 0px 110px;transition-property: padding;transition-duration: .1s;transition-delay: 0s;"
+		}
+	</script>

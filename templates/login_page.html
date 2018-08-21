@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login Page</title>
+		<link rel="stylesheet" href="/static/css/login_page.css">
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/login-util.css">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/login-main.css">
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/daterangepicker/moment.min.js"></script>
+	<script src="static/bootstrap/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/js/main.js"></script>
+	</head>
+	<header>
+		<h1 id="home-name">RYANANA</h1>
+		<h2 id="home-top-description">THE RYANANA MEMBERSHIP LOGIN SYSTEM</h2>
+	</header>
+	<body>
+		<nav id="navbar">
+				<a>{{result}}</a>	
+		</nav>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="login" method="POST">
+					<div class="wrap-input100 validate-input m-t-50 m-b-35" data-validate = "Enter username">
+						<input class="input100" type="text" name="Username" id="username">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+						<input class="input100" type="password" name="Password" id="password">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<ul class="login-more p-t-190">
+						<li class="m-b-8">
+							<span class="txt1">
+								Forgot
+							</span>
+
+							<a href="index#CONTACT_US" class="txt2">
+								Username / Password?
+							</a>
+						</li>
+
+						<li>
+							<span class="txt1">
+								Don’t have an account?
+							</span>
+
+							<a href="signup" class="txt2">
+								Sign up
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script>
+		var username = document.getElementById("username");
+		var password = document.getElementById("password");
+		username.addEventListener("focus", usernameFocusFunction, true);
+		password.addEventListener("focus", passwordFocusFunction, true);
+		username.addEventListener("blur", usernameBlurFunction, true);
+		password.addEventListener("blur", passwordBlurFunction, true);
+		function usernameFocusFunction() {
+			document.getElementById("username").style = "padding:0 5px;transition-property: padding;transition-duration: .5s;transition-delay: .2s;"
+		}
+		function passwordFocusFunction() {
+			document.getElementById("password").style = "padding:0 5px;transition-property: padding;transition-duration: .5s;transition-delay: .2s;"
+		}
+		function usernameBlurFunction() {
+			document.getElementById("username").style = "padding:0px 5px 0px 110px;transition-property: padding;transition-duration: .1s;transition-delay: 0s;"
+		}
+		function passwordBlurFunction() {
+			document.getElementById("password").style = "padding:0px 5px 0px 110px;transition-property: padding;transition-duration: .1s;transition-delay: 0s;"
+		}
+
+	</script>

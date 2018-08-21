@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Admin Bill</title>
+		<link rel="stylesheet" href="/static/css/index.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<header>
+		<h1 id="home-name">RYANANA</h1>
+		<h2 id="home-top-description">THE RYANANA ADMINISTRATOR SYSTEM</h2>
+	</header>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<nav class="navbar navbar-inverse" id="navbar">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>   
+				  </button>
+				  <a class="navbar-brand" href="#" style="text-transform: uppercase;">{{session['Username']}}</a>
+				</div>
+				<div>
+				  <div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+					  <li><a href="feedback">FEEDBACK</a></li>
+					  <li><a href="bill">BILL</a></li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					 	<li><a href="../logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+		</nav>
+		<script>
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >=sticky) {
+			navbar.classList.add("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:70px;");
+			
+		  } else {
+			navbar.classList.remove("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:22px;");
+			}
+		}
+		</script>
+		<div style="font-family: Verdana;" id="content">
+			{% for items in bills%}
+			<div class="container"><br>
+					<h1 style="color:#a23e48">Bill No: {{items[0]}}</h1><br>
+					<h4>User ID: {{items[1]}}</h4><br>
+				<div id="{{items[0]}}" class="collapse">
+					<table style="width:100%" border = 1>
+					<tr>
+						<th style="width:80%">&nbsp Details</th>
+						<th style="width:20%;text-align:right;">Unit Price&nbsp </th> 
+					</tr>
+					{% for i in range(0,billslen) %}
+						{% set item = items[i+3] %}
+						{% for detail in item%}
+						<tr>	
+							<td style="width:80%">&nbsp {{detail[1]}}</td>
+							<td style="width:20%;text-align:right;">$ {{detail[2]}}&nbsp </td>
+						</tr>
+						{% endfor %}
+					{% endfor %}
+					</table>
+					<h4 style="float:right;margin-right:2%;color:#a23e48">Total: $ {{items[2]}}</h4>
+				<br><br>
+				</div>
+				<div style="float:right">
+				<button class="btn btn-success" data-toggle="collapse" data-target="#{{items[0]}}"><span class="glyphicon glyphicon-collapse-up"></span> EXPAND</button>&nbsp
+				<form action="bill" method="post" style="float:right">
+					<input name="Bill_ID" value="{{items[0]}}" style="display:none">
+					<button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> REMOVE</button>
+				</form>
+				</div>
+			</div>
+			</div><br><hr>
+			{% endfor %}
+		</div>
+	</body>

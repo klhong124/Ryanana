@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Market Page</title>
+		<link rel="stylesheet" href="/static/css/market_page.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<header>
+		<h1 id="home-name">RYANANA</h1>
+		<h2 id="home-top-description">THE RYANANA MEMBERSHIP SHOPPING SYSTEM</h2>
+	</header>
+	<body>
+		<nav class="navbar navbar-inverse" id="navbar">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>   
+				  </button>
+				  <a class="navbar-brand" href="../{{session['userID']}}#" style="text-transform: uppercase;">{{session['Username']}}</a>
+				</div>
+				<div>
+				  <div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+					  <li><a href="../{{session['userID']}}#PRODUCTS">PRODUCTS</a></li>
+					  <li><a href="../{{session['userID']}}#WHERE_TO_BUY">BUY NOW</a></li>
+					  <li><a href="../{{session['userID']}}#CONTACT_US">CONTACT US</a></li>
+					  <li><a href="../{{session['userID']}}#FAQ">FAQ</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					  <li><a href="../../market"><span class="glyphicon glyphicon-barcode"></span> Market</a></li>
+					  <li><a href="../../logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+		</nav> 
+		<script>
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >=sticky) {
+			navbar.classList.add("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:70px;");
+			
+		  } else {
+			navbar.classList.remove("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:22px;");
+			}
+		}
+		</script>	
+		<div style="font-family: Verdana;" id="content">
+			<div>
+				{% for items in productlist%}
+				<div class="container">
+				<form action="../../cart" method="POST">
+					<input name="cart_ID" value="{{items[3]}}" style="display:none">
+					<button style="float:right;margin-top:55px;" type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> REMOVE</button>
+				</form>
+				<div style="float:right;padding-right:5%;text-align:right;">
+					<h1 style="color:#a23e48">{{items[1]}}</h1>
+					<h4>$ {{items[2]}}</h4>
+				</div>
+				<div>
+					<img style=""src="../../static/css/img/Product/PRODUCT{{items[0]}}.png" alt="PRODUCT{{items[0]}}" width="100px">
+				</div>
+				</div>
+				{% endfor %}
+				<hr>
+				<div class="container">
+				{% if total==0 %}
+				<a href="../../market">
+					<button style="float:right;margin-top:55px;" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-share-alt"></span> MARKET</button>
+				</a>
+				{% else %}
+				<a href="../../bill">
+					<button style="float:right;margin-top:55px;" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-usd"></span> PURCHASE</button>
+				</a>
+				{% endif %}
+			
+				<div style="float:right;padding-right:3%;text-align:right;">
+					<h1 style="color:#a23e48">Total</h1>
+					<h4>$ {{total}}</h4>
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>

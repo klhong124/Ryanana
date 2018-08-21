@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Admin Feedback</title>
+		<link rel="stylesheet" href="/static/css/index.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<header>
+		<h1 id="home-name">RYANANA</h1>
+		<h2 id="home-top-description">THE RYANANA ADMINISTRATOR SYSTEM</h2>
+	</header>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<nav class="navbar navbar-inverse" id="navbar">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>   
+				  </button>
+				  <a class="navbar-brand" href="#" style="text-transform: uppercase;">{{session['Username']}}</a>
+				</div>
+				<div>
+				  <div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+					  <li><a href="feedback">FEEDBACK</a></li>
+					  <li><a href="bill">BILL</a></li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					 	<li><a href="../logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+		</nav> 
+		<script>
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >=sticky) {
+			navbar.classList.add("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:70px;");
+			
+		  } else {
+			navbar.classList.remove("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:22px;");
+			}
+		}
+		</script>
+		<div style="font-family: Verdana;" id="content">
+			{% for items in feedback%}
+			<div class="container"><br>
+				<h1 style="color:#a23e48">{{items[0]}}</h1><br>
+				<h4>{{items[1]}}</h4><br>
+				<div style="position:absolute">
+				<h6 style="color:gray">Email: {{items[2]}}</h6>
+				<h6 style="color:gray">Phone: {{items[3]}}</h6>
+				<h6 style="color:gray">Email_Reply: {{items[4]}}</h6>
+				<h6 style="color:gray">Call_Reply: {{items[5]}}</h6>
+				<h6 style="color:gray">SMS_Reply: {{items[6]}}</h6>
+				</div>
+				<form action="feedback" method="post">
+				<input name="Feedback_ID" value="{{items[7]}}" style="display:none">
+				<br><br><br><br><button style="float:right" type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> REMOVE</button>
+				</form>
+			</div><hr>
+			{% endfor %}
+		</div>
+	</body>

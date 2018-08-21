@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Main Page</title>
+		<link rel="stylesheet" href="../static/css/index.css">
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<header>
+		<h1 id="home-name">RYANANA</h1>
+		<h2 id="home-top-description">BEST BANANA IN TOWN BY RYAN KWAN</h2>
+	</header>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<nav class="navbar navbar-inverse" id="navbar">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>   
+				  </button>
+				  <a class="navbar-brand" href="#" style="text-transform: uppercase;">{{session['Username']}}</a>
+				</div>
+				<div>
+				  <div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+					  <li><a href="#PRODUCTS">PRODUCTS</a></li>
+					  <li><a href="#WHERE_TO_BUY">BUY NOW</a></li>
+					  <li><a href="#CONTACT_US">CONTACT US</a></li>
+					  <li><a href="#FAQ">FAQ</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					  <li><a href="../market"><span class="glyphicon glyphicon-barcode"></span> Market</a></li>
+					  <li><a href="../cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+					  <li><a href="../logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+		</nav> 
+		<script>
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >=sticky) {
+			navbar.classList.add("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:70px;");
+			
+		  } else {
+			navbar.classList.remove("navbar-fixed-top");
+			document.getElementById("content").style=("margin-top:22px;");
+			}
+		}
+		</script>	
+		<div style="font-family: Verdana;" id="content">
+				<div class="container">
+				  <h1 style="color:#a23e48">INTRODUCTION</h1>
+				  <p>RYANANA is an edible fruit – botanically a berry – produced by several 
+				  kinds of large herbaceous flowering plants in the genus Musa. In some countries, 
+				  RYANANA can be used for cooking and called plantains, in contrast to dessert bananas</p>
+				  <p>It is an excellent source of potassium and vitamin B6, fibre and carbohydrate, 
+				  and supply some vitamin C. Since they have a lower water content than most fruit, b
+				  ananas typically have more calories as well as a higher sugar content compared to o
+				  ther non-tropical fruits.</p>
+				</div><br><br>
+				<h5 class=csrolldown style="color:#a23e48;text-align:center;">SCROLL DOWN TO SEE MORE </h5>
+			<div id="INTRODUCTIONBODY">
+				<h1 id="home-name">RYANANA BANANA</h1>
+			</div>
+			<div id="PRODUCTS">
+				<div class="container"><br><br>
+				  <h1 style="color:#a23e48">PRODUCTS</h1>
+				  <p>There are many kind of RYANANA for you to choose, all of them are very cheap.</p>
+				</div>
+			</div>
+			<div id="PRODUCTSBODY">
+			<div id="_150bigger">
+				<img src="../static/css/img/150bigger.png" alt="150biggerbg" width="100%">
+			</div>
+			<div class="size_banana">
+			<img src="../static/css/img/Product/small_banana.png" alt="small_banana" width="60%">
+			<h3>NORMAL BANANA SIZE</h3>
+			</div>
+			<div class="size_banana">
+				<img src="../static/css/img/Product/big_banana.png" alt="big_banana" width="60%">
+				<h3>RYANANA SIZE</h3>
+			</div>
+				<div class="grid-container">
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT1.png" alt="PRODUCT1" width="50%">
+					<h4>BATMAN</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT2.png" alt="PRODUCT2" width="50%">
+					<h4>REDCODE</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT3.png" alt="PRODUCT3" width="50%">
+					<h4>CRYSYAL</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT4.png" alt="PRODUCT4" width="50%">
+					<h4>KISS</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT5.png" alt="PRODUCT5" width="50%">
+					<h4>CLASSIC</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT6.png" alt="PRODUCT6" width="50%">
+					<h4>TIFFANY</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT7.png" alt="PRODUCT7" width="50%">
+					<h4>ADOLESCENT</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT8.png" alt="PRODUCT8" width="50%">
+					<h4>ORANGE</h4></div>
+					<div class="grid-item"><img src="../static/css/img/Product/PRODUCT9.png" alt="PRODUCT9" width="50%">
+					<h4>TOXIC</h4></div>
+				</div>
+			</div>
+			<div id="WHERE_TO_BUY">
+				<div class="container"><br><br>
+				  <h1 style="color:#a23e48">BUY NOW</h1>
+				  <p>Buy your RYANANA at the RYANANA®OnlineStore. We’ll help you choose the right banana.</p>
+				  <p>Or order it through this website.</p>
+				</div><br>
+			</div>
+			<div id="WHERE_TO_BUY_BODY">
+				<div id="WHEREBODY">
+					<h1 id="home-name" style="color:white;">RYANANA OnlineStore</h1>
+				</div>
+				<br>
+				<p>If you want to order RYANANA, please click the below button to enter our product list.</p>
+				<a type="button" class="btn" id="signupbtn"  href="../market"><h5 class=csrolldown style="color:black;text-align:center;"><b>Go to Market</b></h5></a>
+			</div>
+			
+			<div id="CONTACT_US">
+				<div class="container"><br><br>
+				  <h1 style="color:#a23e48">CONTACT US</h1>
+				  <p>Thank you for visiting our website! Please complete the form below, so we can provide quick and efficient service. If this is an urgent matter please contact Customer Support:</p>
+				  <p><b>H.K.- 36203963<br>Monday-Friday :7:30AM - 10:00PM<br>ryanana@gmail.com<br>P.O. Box 283 8562 Fusce Rd.<br>Frederick Nebraska 20620</b></p>
+				<form action="../feedback" method="POST">
+					<input placeholder='How should we call you?' name="name" style="width:20% !important;" value="{{ session['Username']}}"><br><br>
+					<textarea rows="7"  placeholder='Please feel free to leave any comment.' name="content" style="width:95%;"></textarea><br><br>
+					<input placeholder='Email address' name="email" style="width:30% !important;" value="{{ session['Email']}}"><br><br>
+					<input placeholder='Phone number' name="phone" style="width:30% !important;" value="{{ session['Phone']}}"><br><br>
+					<span>*Contact Preference</span><br>
+					<input type="checkbox" name="emailreply" value="Yes">Please reply to my email address<br>
+					<input type="checkbox" name="callreply" value="Yes">Please reply to my phone by call<br> 
+					<input type="checkbox" name="smsreply" value="Yes">Please reply to my phone by SMS<br>
+					<input type="submit" class="btn btn-info" value="Submit">
+				</form> 
+				</div>
+			</div>
+			<div id="FAQ">
+				<div class="container"><br><br>
+				  <h1 style="color:#a23e48">FREQUENTLY ASKED QUESTION</h1><br>
+				  <br><h4>How can I change my shipping address?</h4>
+				  <p>By default, the last used shipping address will be saved into to your Sample Store account. When you are checking out your order, the default shipping address will be displayed
+				  and you have the option to amend it if you need to.</p>
+				  <br><h4>How do I make payments using Paypal? How does it work?</h4>
+				  <p>Paypal is the easiest way to make payments online. While checking out your order, you will be redirected to the Paypal website. Be sure to fill in correct details for fast & ha
+				  ssle-free payment processing. After a successful Paypal payment, a payment advice will be automatically generated to ryanana.com system for your order.</p>
+				  <br><h4>How long will it take for my order to arrive after I make payment?</h4>
+				  <p>Members who ship their orders within Singapore should expect to receive their orders within five (5) to ten (10) working days upon payment verification depending on the volume
+				  of orders received.</p>
+				  <p>If you experience delays in receiving your order, contact us immediately and we will help to confirm the status of your order.</p>
+				  <br><h4>I have changed my phone number.</h4>
+				  <p>Please visit “Contact Us” and pass us your email address and phone number for us to follow.</p>
+				</div><br><br>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<hr>
+		<h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Announcement</h5>
+		<p>This website is a module assignment of 205COM, some content of this website are not original. Photos are online resouces and some information are found from other website.</p>
+		<a href="https://www.bbcgoodfood.com/howto/guide/health-benefits-bananas">https://www.bbcgoodfood.com/howto/guide/health-benefits-bananas</a><br>
+		<a href="https://www.google.com.hk/imghp?hl=en&tab=wi">https://www.google.com.hk/imghp?hl=en&tab=wi</a><br>
+		<a href="https://www.samplestore.com/site/faq">https://www.samplestore.com/site/faq</a><br>
+		<a href="https://en.wikipedia.org/wiki/Banana">https://en.wikipedia.org/wiki/Banana</a><br>
+		<br>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-youtube"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<br><br>
+		© 2018 Copyright:Ryan Kwan
+
+	</footer>					  
+</html> 
